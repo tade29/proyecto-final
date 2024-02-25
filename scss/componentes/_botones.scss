@@ -1,0 +1,13 @@
+@mixin boton-1 {
+    @include flex-conteiner(7.5rem,2.2,null);
+    @include center-flex;
+    border-radius: 10px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: solid $element-color-secondary;
+    color: $font-color-principal;
+    font-family: "Anta", sans-serif;
+    background: $element-color-secondary;
+}

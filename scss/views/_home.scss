@@ -1,0 +1,117 @@
+
+
+.principal {
+    z-index: -2;
+    @include flex-conteiner(100%, 70vh, null);
+    background: $element-color-secondary; 
+    box-shadow: 0 0 10px 2px $element-color-secondary;
+    @include center-flex;
+    &-img {
+        @include flex-conteiner(auto, 90%, null);
+        @include center-flex;
+
+        position: relative;
+
+
+        &-text {
+            @include absolute-flex(42%, null, null,null,60vw,6rem);
+            @include center-flex;
+            z-index: 1;
+            font-family: "Kdam Thmor Pro", sans-serif;
+            font-size: 5rem;
+            color: #1cccff;
+            text-shadow: 0 0 10px #1cadff;
+            backdrop-filter: invert(80%);
+            border: solid #1cccff;
+        }
+
+        &-img {
+            width: 70vw;
+            height: 100%;
+            box-shadow: 0 0 20px 2px;
+            border-radius: 3px;
+        }
+    }
+}
+
+.presentacion-1 {
+    @include flex-conteiner (95%,45vh, null);
+    background: $element-color-third;
+    box-shadow: 0 0 10px 2px;
+    margin-top: 10vh;
+
+    &-img {
+        @include flex-conteiner(30rem, 100%,null);
+        @include center-flex;
+
+        &-img {
+            height: 38vh;
+            width: 90%;
+            box-shadow: 0 0 20px 2px;
+        }
+    }
+
+    &-text {
+        @include flex-conteiner(100%,null,null);
+        @include center-flex;
+        font-size: xx-large;
+        font-family: "Anta", sans-serif;
+        color: $font-color-principal;
+        line-height: 2.5vw;
+    }
+}
+
+.presentacion-2 {
+    @extend .presentacion-1;
+    margin-left: 2%;
+    width: 98%;
+    position: relative;
+
+
+    &-img {
+        @include absolute-flex(null,0,null,null,30rem, 100%);
+        @include center-flex;
+
+
+        &-img {
+            height: 38vh;
+            width: 90%;
+            box-shadow: 0 0 20px 2px;
+        }
+    }
+
+    &-text {
+        @include absolute-flex(null, 30rem,null,null,60vw,100%);
+        align-items: center;
+        justify-content: end;
+        font-size: xx-large;
+        font-family: "Anta", sans-serif;
+        color: $font-color-principal;
+        line-height: 2.5vw;
+    }
+}
+
+.presentacion-3 {
+    @extend .presentacion-1;
+    margin-bottom: 5rem;
+
+    &-img {
+        @include flex-conteiner(30rem, 100%,null);
+        @include center-flex;
+
+        &-img {
+            height: 38vh;
+            width: 90%;
+            box-shadow: 0 0 20px 2px;
+        }
+    }
+
+    &-text {
+        @include flex-conteiner(60vw,null,null);
+        @include center-flex;
+        font-size: xx-large;
+        font-family: "Anta", sans-serif;
+        color: $font-color-principal;
+        line-height: 2.5vw;
+    }
+}

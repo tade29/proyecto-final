@@ -1,0 +1,145 @@
+.encabezado {
+    @include fixed(0, null, null, null, 100%, 11vh);
+    background: $element-color-principal;
+    box-shadow: 0 0 20px 3px $ilumination-color;
+    z-index: 2;
+}
+
+.barra-de-navegacion {
+    @include flex-conteiner(100%, 100%, null);
+    @include center-flex;
+    justify-content: left;
+    position: relative;
+
+    &-logo {
+        @include flex-conteiner(auto, 100%, null);
+
+        &-img {
+            @include size (auto, 85%);
+            margin-left: 20px;
+            margin-top: 5%;
+            border-radius: 8px;
+            box-shadow:0 0 .5vh 2px $ilumination-color;
+        }
+    }
+
+    &-nombre {
+        @include absolute-flex(null,null,null,100px,100%,null);
+        margin-left: 15px;
+        font-family: "Kode Mono", monospace;
+        color: $font-color-principal;
+        font-size: xx-large;
+        padding-left: 5px;
+        text-shadow: 0 0 5px $element-color-secondary;
+    }
+
+    
+
+    &-panel {
+        @include absolute-flex (null,null,null,null,100%,100%);
+        @include center-flex;
+        z-index: 1;
+
+        &-item1 {
+            @include boton-1;
+            margin-inline: 10px;
+            z-index: -2;
+        }
+
+        &-item2{
+            @extend .barra-de-navegacion-panel-item1;
+        }
+
+        &-item3 {
+            @extend .barra-de-navegacion-panel-item1;
+        }
+
+        &-item4 {
+            @include boton-1;
+            background: $element-color-principal;
+            position: relative;
+            margin-inline: 10px;
+            transition: 1s;
+            left: 0;
+
+
+
+            &-ventana {
+                @include flex-conteiner(0,0,column);
+                background-color: $element-color-secondary;
+                position:absolute;
+                top: 10px;
+                right: -10px;
+                transition: 0.5s;
+                z-index: -1;
+                opacity: 95%;
+                border-radius: 10px;
+                overflow: hidden;
+
+
+                &-espacio {
+                    display: none;
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 5px;
+                    background: $element-color-principal;
+                    margin-inline: 5px;
+                    border-radius: 5px;
+                    align-items: center;
+                    text-align: 20px;
+
+                    &-text {
+                        font-family: "Anta", sans-serif;
+                        margin-left: 20px;
+                        
+                    }
+                }
+            }
+        }
+
+        &-item4:hover {
+            border: solid $font-color-secondary;
+            left: 40px;
+            background: $element-color-secondary;
+
+            .barra-de-navegacion-panel-item4-ventana {
+                height: 8rem;
+                width: 400px;
+                box-shadow: 0 0 10px 3px $ilumination-color;
+                &-espacio {
+                    display: flex;
+
+                    &-2 {
+                        position: absolute;
+                        top: -3px;
+                        width: 50px;
+                        height: 15px;
+                        left: -44.5px;
+                        z-index: 1;
+                    }
+                }
+
+        }
+        }
+
+    }
+}
+
+
+.redes {
+    @include flex-conteiner(100%,4rem,row);
+    @include center-flex;
+}
+
+.fa-brands {
+    margin-top: 3vh;
+    justify-content: left;
+    color: $element-color-principal;
+    font-size: 5vh;
+    padding-inline: 40px;
+}
+
+.fa-regular {
+    @extend .fa-brands
+}
+

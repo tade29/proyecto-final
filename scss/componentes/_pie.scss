@@ -1,0 +1,34 @@
+footer {
+    @include fixed(null,null,0,null,100%,15px);
+    display: flex;
+    align-items: center;
+    background: $element-color-principal;
+    box-shadow: 0 0 5px 2px $element-color-principal;
+    opacity: 50%;
+    transition: 1s;
+
+    &:hover {
+        height: 3.5rem;
+        opacity: 100%;
+
+        .pie-contenido {
+            display: block
+        }
+    }
+}
+
+.pie{
+ @include flex-conteiner (100%,100%,null);
+
+ &-contenido {
+
+    margin-left: 20px;
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.numero {
+     margin-top: 5px;
+}
+
+}
+

@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62,5%;
+    background: $font-color-secondary;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    all: unset;
+}
+
+.barra-de-navegacion-panel-itemactive {
+    @include boton-1;
+    margin-inline: 10px;
+    z-index: -2;
+    animation: pagina-actual 1.5s;
+    transform: scale(1.2);
+    pointer-events: none;
+    box-shadow: 0 0 10px 3px $ilumination-color;
+    z-index: -2;
+}
+
+@keyframes pagina-actual {
+    0% {
+        transform: scale(0);
+        font-family: "Anta", sans-serif;
+        box-shadow: 0 0 0 0;
+        z-index: 1;
+    }
+
+    10% {
+        font-family: "Jacquarda Bastarda 9", serif;
+    }
+
+    20% {
+        font-family: "Dancing Script", cursive;
+    }
+
+    30% {
+        font-family: "Anta", sans-serif;
+    }
+
+    40% {
+        font-family: "Jacquarda Bastarda 9", serif;
+    }
+
+    50% {
+        font-family: "Dancing Script", cursive;
+    }
+
+    60% {
+        transform: scale(2);
+        font-family: "Anta", sans-serif;
+        box-shadow: 0 0 0 0 ;
+    }
+
+    70% {
+
+        font-family: "Jacquarda Bastarda 9", serif;
+    }
+
+    80% {
+        font-family: "Dancing Script", cursive;
+        z-index: 1;
+    }
+
+    90% {
+        font-family: "Anta", sans-serif;
+    }
+
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16vh;
+    z-index: -2;
+}

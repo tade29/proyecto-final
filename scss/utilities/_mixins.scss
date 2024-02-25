@@ -1,0 +1,38 @@
+@mixin fixed($top, $right, $bottom, $left, $width, $height) {
+    position: fixed;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin flex-conteiner($width, $height, $direction) {
+    display: flex;
+    width: $width;
+    height: $height;
+    flex-direction: $direction;
+}
+
+@mixin size($width,$height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin absolute-flex ($top, $right, $bottom, $left, $width, $height) {
+    display: flex;
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin center-flex {
+    justify-content: center;
+    align-items: center;
+}
+
