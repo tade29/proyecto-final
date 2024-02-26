@@ -124,6 +124,8 @@
         display: block;
     }
 
+
+
     .barra-de-navegacion-logo {
         display: block;
     }
@@ -169,14 +171,21 @@
     }
 }
 
-@media only screen and ( max-width: 650px) {
+@media only screen and (max-width: 700px) {
     .principal-img {
         &-text {
             width: 500px;
         }
 
+
+    }
+}
+
+@media only screen and ( max-width: 650px) {
+    .principal-img {
+
         &-img {
-            width: 100%;
+            width: 100vw;
         }
     }
     .presentacion {
@@ -272,6 +281,16 @@
         &-text {
             font-size: 3.5rem;
             width: 400px;
+        }
+    }
+
+    @keyframes pagina-actual {
+        0% {
+            transform: scale(1);
+        }
+
+        60% {
+            transform: scale(1);
         }
     }
 

@@ -1,34 +1,33 @@
 footer {
-    @include fixed(null,null,0,null,100%,15px);
+    @include fixed(null,null,0,null,100%,25px);
     display: flex;
     align-items: center;
     background: $element-color-principal;
     box-shadow: 0 0 5px 2px $element-color-principal;
-    opacity: 50%;
+    opacity: 70%;
     transition: 1s;
 
     &:hover {
-        height: 3.5rem;
         opacity: 100%;
-
-        .pie-contenido {
-            display: block
-        }
+        box-shadow: 0 0 5px 4px $element-color-secondary;
     }
 }
 
-.pie{
- @include flex-conteiner (100%,100%,null);
+.pie{ 
+ @include flex-conteiner (100%,100%,null); 
+ position: relative;
 
- &-contenido {
-    display: none;
+ &-contenido { 
+    @include flex-conteiner (100%,100%,null);
     margin-left: 20px;
     font-family: "Kdam Thmor Pro", sans-serif;
+    position: relative;
 }
 
 .numero {
+    @include absolute-flex (-2px, 0,null,null,200px,50px);
      margin-top: 5px;
 }
 
-}
+} 
 
