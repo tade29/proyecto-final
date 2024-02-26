@@ -575,6 +575,121 @@ main {
     line-height: 1.5rem;
     font-size: 1.7rem;
   }
+  .barra-de-navegacion-panel {
+    right: -580px;
+    width: 620px;
+  }
+  @keyframes salida {
+    0% {
+      width: 620px;
+    }
+    25% {
+      width: 630px;
+    }
+    50% {
+      width: 620px;
+    }
+    75% {
+      width: 630px;
+    }
+  }
+  .barra-de-navegacion-panel-item1, .barra-de-navegacion-panel-item2, .barra-de-navegacion-panel-item3 {
+    margin-inline: 5px;
+  }
+  @keyframes pagina-actual {
+    60% {
+      transform: scale(1);
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .barra-de-navegacion-panel-itemactive {
+    display: none;
+  }
+  .barra-de-navegacion-panel {
+    width: 480px;
+    right: -440px;
+  }
+  @keyframes salida {
+    0% {
+      width: 480px;
+    }
+    25% {
+      width: 490px;
+    }
+    50% {
+      width: 480px;
+    }
+    75% {
+      width: 490px;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .principal {
+    height: 30rem;
+  }
+  .principal-img-text {
+    font-size: 3.5rem;
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .barra-de-navegacion-panel-item1, .barra-de-navegacion-panel-item2, .barra-de-navegacion-panel-item3 {
+    font-size: 1rem;
+    width: 6rem;
+  }
+  .barra-de-navegacion-panel-item4 {
+    font-size: 1rem;
+    width: 6rem;
+  }
+  .barra-de-navegacion-panel {
+    right: -360px;
+    width: 400px;
+  }
+  @keyframes salida {
+    0% {
+      width: 400px;
+    }
+    25% {
+      width: 410px;
+    }
+    50% {
+      width: 400px;
+    }
+    75% {
+      width: 410px;
+    }
+  }
+  .presentacion-1-text {
+    font-size: 1.3rem;
+  }
+  .presentacion-2-text {
+    font-size: 1.3rem;
+  }
+  .presentacion-3-text {
+    font-size: 1.3rem;
+  }
+  .barra-de-navegacion-panel-item4:hover .barra-de-navegacion-panel-item4-ventana {
+    width: 300px;
+  }
+  .fa-brands, .fa-regular {
+    padding-inline: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .barra-de-navegacion-logo {
+    height: 70%;
+  }
+  .barra-de-navegacion-nombre {
+    font-size: 1.7rem;
+    left: 95px;
+  }
+  .principal-img-text {
+    font-size: 2.5rem;
+    width: 300px;
+    height: 80px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
