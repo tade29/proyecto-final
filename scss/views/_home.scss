@@ -14,7 +14,7 @@
 
 
         &-text {
-            @include absolute-flex(42%, null, null,null,60vw,6rem);
+            @include absolute-flex(42%, null, null,null,612px,6rem);
             @include center-flex;
             z-index: 1;
             font-family: "Kdam Thmor Pro", sans-serif;
@@ -35,7 +35,7 @@
 }
 
 .presentacion-1 {
-    @include flex-conteiner (95%,45vh, null);
+    @include flex-conteiner (95%,25rem, null);
     background: $element-color-third;
     box-shadow: 0 0 10px 2px;
     margin-top: 10vh;

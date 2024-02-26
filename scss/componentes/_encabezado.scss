@@ -1,5 +1,5 @@
 .encabezado {
-    @include fixed(0, null, null, null, 100%, 11vh);
+    @include fixed(0, null, null, null, 100%, 7rem);
     background: $element-color-principal;
     box-shadow: 0 0 20px 3px $ilumination-color;
     z-index: 2;
@@ -15,7 +15,7 @@
         @include flex-conteiner(auto, 100%, null);
 
         &-img {
-            @include size (auto, 85%);
+            @include size (auto, 88%);
             margin-left: 20px;
             margin-top: 5%;
             border-radius: 8px;
@@ -25,7 +25,7 @@
 
     &-nombre {
         @include absolute-flex(null,null,null,100px,100%,null);
-        margin-left: 15px;
+        margin-left: 2vw;
         font-family: "Kode Mono", monospace;
         color: $font-color-principal;
         font-size: xx-large;
@@ -120,6 +120,10 @@
                 }
 
         }
+
+        .redes {
+            display: flex;
+        }
         }
 
     }
@@ -129,6 +133,7 @@
 .redes {
     @include flex-conteiner(100%,4rem,row);
     @include center-flex;
+    display: none;
 }
 
 .fa-brands {
