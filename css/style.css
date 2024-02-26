@@ -163,6 +163,18 @@
   padding-inline: 40px;
 }
 
+.flecha {
+  display: flex;
+  position: absolute;
+  left: 5px;
+  width: auto;
+  height: auto;
+  font-size: 1.5rem;
+  display: none;
+  color: #498C74;
+  text-shadow: 0 0 5px #012619;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -189,6 +201,7 @@ footer:hover .pie-contenido {
   height: 100%;
 }
 .pie-contenido {
+  display: none;
   margin-left: 20px;
   font-family: "Kdam Thmor Pro", sans-serif;
 }
@@ -474,6 +487,93 @@ main {
   }
   .barra-de-navegacion-panel-item4:hover {
     left: 0px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .presentacion-1, .presentacion-2, .presentacion-3 {
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .presentacion-1-text {
+    margin-inline: 20px;
+  }
+  .presentacion-1-img {
+    display: none;
+  }
+  .presentacion-2-text {
+    position: static;
+    width: 100%;
+    margin-inline: 20px;
+  }
+  .presentacion-2-img {
+    display: none;
+  }
+  .presentacion-3-text {
+    width: 100%;
+    margin-inline: 20px;
+  }
+  .presentacion-3-img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .flecha {
+    display: block;
+  }
+  .barra-de-navegacion-logo {
+    display: block;
+  }
+  .barra-de-navegacion-nombre {
+    left: 130px;
+  }
+  .barra-de-navegacion-panel {
+    right: -640px;
+    width: 675px;
+    border-radius: 30px;
+    background: #13523b;
+    padding-right: 27px;
+    animation: salida 2.5s;
+    animation-delay: 0.5s;
+    border-left: solid #012619;
+    transition: 1s;
+  }
+  .barra-de-navegacion-panel:hover {
+    right: -25px;
+  }
+  @keyframes salida {
+    0% {
+      width: 675px;
+    }
+    25% {
+      width: 690px;
+    }
+    50% {
+      width: 675px;
+    }
+    75% {
+      width: 690px;
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
+  .principal-img-text {
+    width: 500px;
+  }
+  .principal-img-img {
+    width: 100%;
+  }
+  .presentacion-1-text {
+    line-height: 1.5rem;
+    font-size: 1.7rem;
+  }
+  .presentacion-2-text {
+    line-height: 1.5rem;
+    font-size: 1.7rem;
+  }
+  .presentacion-3-text {
+    line-height: 1.5rem;
+    font-size: 1.7rem;
   }
 }
 

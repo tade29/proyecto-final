@@ -21,7 +21,7 @@ footer {
  @include flex-conteiner (100%,100%,null);
 
  &-contenido {
-
+    display: none;
     margin-left: 20px;
     font-family: "Kdam Thmor Pro", sans-serif;
 }
